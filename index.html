@@ -11,58 +11,71 @@
 
   <title>Almarie Bu | Senior Web Developer | Frappe & ERPNext</title>
 
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/almarie.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+  <a class="skip-link" href="#home">Skip to content</a>
 
   <header class="site-header">
 
-    <nav class="container nav">
+    <div class="container nav">
 
       <a class="logo" href="#home">
         Almarie<span>.</span>
       </a>
 
+      <nav class="nav-panel" id="site-nav" aria-label="Primary">
+        <a href="#projects">Work</a>
+        <a href="#process">Process</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Let’s talk</a>
+      </nav>
+
       <button
         class="menu-toggle"
+        type="button"
         aria-label="Open menu"
         aria-expanded="false"
+        aria-controls="site-nav"
       >
-        ☰
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-    </nav>
+    </div>
 
   </header>
 
 
-  <main>
-
-    <!-- =========================
-         HERO
-    ========================== -->
+  <main id="main-content">
 
     <section id="home" class="hero">
 
       <div class="container hero-grid">
 
-        <div>
+        <div class="hero-copy">
 
-          <p class="eyebrow">
-            SENIOR WEB DEVELOPER • FRAPPE / ERPNEXT • PRODUCT EXPERIENCE
+          <p class="eyebrow accent">
+            Web Developer × ERP Developer
+          </p>
+
+          <p class="hero-name">
+            Almarie Bu
           </p>
 
           <h1>
@@ -74,133 +87,164 @@
             including Frappe / ERPNext development and Product Owner experience.
           </p>
 
+          <div class="path-pills" role="tablist" aria-label="Choose a discipline">
+            <button type="button" class="path-pill" data-path="web" role="tab" aria-selected="false">
+              Web Developer
+            </button>
+            <button type="button" class="path-pill" data-path="frappe" role="tab" aria-selected="false">
+              ERP Developer
+            </button>
+          </div>
+          <p class="path-note" aria-live="polite">
+            Choose a path to reframe the page.
+          </p>
+
           <div class="actions">
-
-            <a class="button primary" href="#projects">
-              View my work
-            </a>
-
-            <a class="button secondary" href="#contact">
-              Contact me
-            </a>
-
+            <a class="button primary" href="#projects">View my work</a>
+            <a class="button ghost" href="#contact">Let’s work together</a>
           </div>
 
         </div>
 
-
-        <div class="hero-card">
-
-          <div class="card-label">
-            What I work with
-          </div>
-
-          <ul>
-            <li>Frappe / ERPNext development</li>
-            <li>Business workflows</li>
-            <li>Requirements and process analysis</li>
-            <li>System customization</li>
-            <li>Product ownership</li>
-            <li>Business process improvement</li>
-          </ul>
-
-        </div>
+        <aside class="hero-aside">
+          <figure class="portrait">
+            <div class="portrait-stage">
+              <div class="portrait-slab" aria-hidden="true"></div>
+              <div class="portrait-frame">
+                <img
+                  src="images/almarie.jpg"
+                  alt="Portrait of Almarie Bu"
+                  width="663"
+                  height="1024"
+                >
+              </div>
+            </div>
+            <figcaption>
+              <span>Frappe</span>
+              <span>ERPNext</span>
+              <span>Python</span>
+            </figcaption>
+          </figure>
+        </aside>
 
       </div>
 
     </section>
 
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section id="about" class="section">
-
-      <div class="container two-column">
-
-        <div>
-
-          <p class="eyebrow">
-            ABOUT ME
-          </p>
-
-          <h2>
-            Technical experience with a strong understanding of business processes.
-          </h2>
-
-        </div>
-
-
-        <div>
-
-          <p>
-            I have more than 5 years of professional experience in web development,
-            progressing from Web Developer to Mid Web Developer and then Senior Web Developer.
-          </p>
-
-          <p>
-            My experience also includes a period as a Product Owner, where I worked
-            closely with business requirements, workflows, systems, and operational processes.
-          </p>
-
-          <p>
-            I enjoy building practical systems that solve real problems and make
-            day-to-day business operations easier to manage.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         EXPERIENCE
-    ========================== -->
-
-    <section id="experience" class="section section-alt">
+    <section id="services" class="section">
 
       <div class="container">
 
-        <p class="eyebrow">
-          PROFESSIONAL EXPERIENCE
-        </p>
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow accent">What I Do</p>
+          <h2>Web applications and ERP systems.</h2>
+        </div>
+
+        <div class="discipline-grid">
+
+          <article class="discipline" data-path="web" data-reveal>
+            <h3>Web Development</h3>
+            <p>I build and maintain web applications, APIs, and the interfaces teams use every day.</p>
+            <ul>
+              <li>Web application development</li>
+              <li>HTML / CSS / JavaScript</li>
+              <li>REST APIs and integrations</li>
+              <li>Backend and frontend work</li>
+              <li>Bug fixing and maintenance</li>
+            </ul>
+          </article>
+
+          <article class="discipline" data-path="frappe" data-reveal>
+            <h3>Frappe / ERPNext</h3>
+            <p>I customize ERPNext and the Frappe Framework to match operational requirements.</p>
+            <ul>
+              <li>ERPNext customization</li>
+              <li>Custom DocTypes and business logic</li>
+              <li>Client Scripts and Server Scripts</li>
+              <li>Custom reports and dashboards</li>
+              <li>Workflow and permission configuration</li>
+              <li>Business process automation</li>
+            </ul>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
-        <!-- WELA SCHOOL SYSTEMS -->
+    <section id="process" class="section">
 
-        <div class="experience-block">
+      <div class="container">
 
-          <h2>
-            Wela School Systems
-          </h2>
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow accent">How I Work</p>
+          <h2>From requirement to a working system.</h2>
+          <p class="section-copy">
+            I take operational needs through build, launch, and ongoing maintenance.
+          </p>
+        </div>
 
+        <ol class="process-list">
+          <li data-reveal>
+            <span class="step-id">01</span>
+            <h3>Understand</h3>
+            <p>Learn the operational problem, the people doing the work, and the current workflow.</p>
+          </li>
+          <li data-reveal>
+            <span class="step-id">02</span>
+            <h3>Define</h3>
+            <p>Turn requirements into DocTypes, workflows, permissions, or application scope.</p>
+          </li>
+          <li data-reveal>
+            <span class="step-id">03</span>
+            <h3>Build</h3>
+            <p>Customize ERPNext or develop the web application against the agreed requirements.</p>
+          </li>
+          <li data-reveal>
+            <span class="step-id">04</span>
+            <h3>Launch</h3>
+            <p>Test, deploy, and check permissions so the system is ready for real use.</p>
+          </li>
+          <li data-reveal>
+            <span class="step-id">05</span>
+            <h3>Maintain</h3>
+            <p>Fix bugs, write queries, and keep improving the system after it is live.</p>
+          </li>
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <section id="experience" class="section">
+
+      <div class="container">
+
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow accent">Professional Experience</p>
+          <h2>Roles shaped by real school and business systems.</h2>
+        </div>
+
+        <div class="experience-block" data-reveal>
+          <h3>Wela School Systems</h3>
           <p class="role">
             Web Developer → Mid Web Developer → Senior Web Developer
           </p>
-
           <p class="experience-summary">
             Progressed through three web development roles while working on school
             management systems and web-based business applications.
           </p>
-
         </div>
 
-
-        <!-- LIVRO SYSTEMS -->
-
-        <div class="experience-block">
-
-          <h2>
-            Livro Systems
-          </h2>
-
+        <div class="experience-block" data-reveal>
+          <h3>Livro Systems</h3>
           <p class="role">
             Senior Web Developer → Product Owner → Senior Web Developer
           </p>
-
           <p class="experience-summary">
             Joined Livro Systems as a Senior Web Developer in April 2025. From January
             to September 2026, I worked as a Product Owner, focusing on product requirements,
@@ -208,45 +252,25 @@
             Senior Web Developer, bringing both technical and product experience to business systems.
           </p>
 
-
           <div class="experience-grid">
 
-
-            <!-- SENIOR WEB DEVELOPER -->
-
-            <article class="info-card">
-
-              <h3>
-                Senior Web Developer
-              </h3>
-
-              <p>
-                Built and improved web and business systems using modern development practices.
-              </p>
-
+            <article class="info-card" data-path="frappe">
+              <h3>Senior Web Developer</h3>
+              <p>Built and improved web and business systems using modern development practices.</p>
               <ul>
                 <li>Frappe / ERPNext development</li>
                 <li>System customization</li>
                 <li>Business workflows</li>
                 <li>Integrations and system improvements</li>
               </ul>
-
             </article>
 
-
-            <!-- PRODUCT OWNER -->
-
             <article class="info-card">
-
-              <h3>
-                Product Owner
-              </h3>
-
+              <h3>Product Owner</h3>
               <p>
                 Worked with stakeholders and teams to define requirements, workflows,
                 priorities, and improvements for business systems.
               </p>
-
               <ul>
                 <li>Enrollment</li>
                 <li>Billing</li>
@@ -257,37 +281,22 @@
                 <li>Employee and intern offboarding</li>
                 <li>Task and time tracking</li>
               </ul>
-
             </article>
 
-
-            <!-- BUSINESS SYSTEMS -->
-
             <article class="info-card">
-
-              <h3>
-                Business Systems
-              </h3>
-
-              <p>
-                Worked across systems supporting multiple business functions and operational needs.
-              </p>
-
+              <h3>Business Systems</h3>
+              <p>Worked across systems supporting multiple business functions and operational needs.</p>
               <ul>
                 <li>Accounting</li>
                 <li>HR</li>
                 <li>CRM</li>
-                <li>S3 attachment integration</li>
+                <li>Huawei OBS attachment integration</li>
                 <li>Requirements and workflow management</li>
               </ul>
-
             </article>
 
-
           </div>
-
         </div>
-
 
         <p class="note">
           Company-specific code, data, screenshots, and confidential information
@@ -299,163 +308,119 @@
     </section>
 
 
-    <!-- =========================
-         PERSONAL PROJECTS
-    ========================== -->
-
     <section id="projects" class="section">
 
       <div class="container">
 
-        <p class="eyebrow">
-          PERSONAL PROJECTS
-        </p>
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow accent">Selected Work</p>
+          <h2>Projects I can publicly demonstrate.</h2>
+          <p class="section-copy">
+            These projects are built independently to demonstrate my technical and
+            business systems skills without exposing private company work.
+          </p>
+        </div>
 
-        <h2>
-          Projects I can publicly demonstrate.
-        </h2>
+        <div class="project-list">
 
-        <p class="section-intro">
-          These projects are built independently to demonstrate my technical and
-          business systems skills without exposing private company work.
-        </p>
-
-
-        <div class="project-grid">
-
-
-          <!-- PROJECT 01 -->
-
-          <article class="project-card">
-
-            <span class="project-number">
-              01
-            </span>
-
-            <h3>
-              School ERP Demo
-            </h3>
-
-            <p>
-              A fictional school system covering enrollment, billing, payments, and grading.
-            </p>
-
-            <div class="tags">
-              <span>ERPNext</span>
-              <span>Frappe</span>
-              <span>Python</span>
-            </div>
-
-            <a
-              href="#"
-              class="project-link"
-              data-placeholder="Add your GitHub repository link for this project."
-            >
-              Coming soon →
+          <article class="project-row" data-path="web" data-reveal>
+            <span class="project-number">01</span>
+            <a class="project-media" href="https://ahon.almariedev.com/" target="_blank" rel="noopener">
+              <img src="images/ahon.png" alt="Ahon home dashboard with budget and ledger" width="1600" height="900">
             </a>
-
+            <div class="project-body">
+              <p class="project-category">
+                Web Application
+                <span class="status-live">Live</span>
+              </p>
+              <h3>Ahon</h3>
+              <p>
+                A personal web app for tracking cash, savings, and utang, with a
+                ledger, budget, and cloud sync. Built with Next.js and TypeScript,
+                with AI-assisted development.
+              </p>
+              <p class="project-tags">Next.js · TypeScript</p>
+              <a
+                href="https://ahon.almariedev.com/"
+                class="project-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View live site <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </article>
 
-
-          <!-- PROJECT 02 -->
-
-          <article class="project-card">
-
-            <span class="project-number">
-              02
-            </span>
-
-            <h3>
-              Employee Lifecycle App
-            </h3>
-
-            <p>
-              A Frappe workflow for access requests, onboarding, employee records, and offboarding.
-            </p>
-
-            <div class="tags">
-              <span>Frappe</span>
-              <span>Workflow</span>
-              <span>JavaScript</span>
+          <article class="project-row" data-path="frappe" data-reveal>
+            <span class="project-number">02</span>
+            <div class="project-body">
+              <p class="project-category">Frappe / ERPNext</p>
+              <h3>School ERP Demo</h3>
+              <p>A fictional school system covering enrollment, billing, payments, and grading.</p>
+              <p class="project-tags">ERPNext · Frappe · Python</p>
+              <a
+                href="#"
+                class="project-link"
+                data-placeholder="Add your GitHub repository link for this project."
+              >
+                Coming soon <span aria-hidden="true">→</span>
+              </a>
             </div>
-
-            <a
-              href="#"
-              class="project-link"
-              data-placeholder="Add your GitHub repository link for this project."
-            >
-              Coming soon →
-            </a>
-
           </article>
 
-
-          <!-- PROJECT 03 -->
-
-          <article class="project-card">
-
-            <span class="project-number">
-              03
-            </span>
-
-            <h3>
-              ERPNext Business Dashboard
-            </h3>
-
-            <p>
-              A simple dashboard for sales, finance, HR, and CRM information.
-            </p>
-
-            <div class="tags">
-              <span>ERPNext</span>
-              <span>Reports</span>
-              <span>Dashboard</span>
+          <article class="project-row" data-path="frappe" data-reveal>
+            <span class="project-number">03</span>
+            <div class="project-body">
+              <p class="project-category">Frappe / Workflow</p>
+              <h3>Employee Lifecycle App</h3>
+              <p>A Frappe workflow for access requests, onboarding, employee records, and offboarding.</p>
+              <p class="project-tags">Frappe · Workflow · JavaScript</p>
+              <a
+                href="#"
+                class="project-link"
+                data-placeholder="Add your GitHub repository link for this project."
+              >
+                Coming soon <span aria-hidden="true">→</span>
+              </a>
             </div>
-
-            <a
-              href="#"
-              class="project-link"
-              data-placeholder="Add your GitHub repository link for this project."
-            >
-              Coming soon →
-            </a>
-
           </article>
 
-
-          <!-- PROJECT 04 -->
-
-          <article class="project-card">
-
-            <span class="project-number">
-              04
-            </span>
-
-            <h3>
-              API Integration Demo
-            </h3>
-
-            <p>
-              A small integration that demonstrates communication between ERPNext
-              and an external service.
-            </p>
-
-            <div class="tags">
-              <span>REST API</span>
-              <span>Python</span>
-              <span>Integration</span>
+          <article class="project-row" data-path="frappe" data-reveal>
+            <span class="project-number">04</span>
+            <div class="project-body">
+              <p class="project-category">ERPNext / Reports</p>
+              <h3>ERPNext Business Dashboard</h3>
+              <p>A simple dashboard for sales, finance, HR, and CRM information.</p>
+              <p class="project-tags">ERPNext · Reports · Dashboard</p>
+              <a
+                href="#"
+                class="project-link"
+                data-placeholder="Add your GitHub repository link for this project."
+              >
+                Coming soon <span aria-hidden="true">→</span>
+              </a>
             </div>
-
-            <a
-              href="#"
-              class="project-link"
-              data-placeholder="Add your GitHub repository link for this project."
-            >
-              Coming soon →
-            </a>
-
           </article>
 
+          <article class="project-row" data-path="web" data-reveal>
+            <span class="project-number">05</span>
+            <div class="project-body">
+              <p class="project-category">Integration</p>
+              <h3>API Integration Demo</h3>
+              <p>
+                A small integration that demonstrates communication between ERPNext
+                and an external service.
+              </p>
+              <p class="project-tags">REST API · Python · Integration</p>
+              <a
+                href="#"
+                class="project-link"
+                data-placeholder="Add your GitHub repository link for this project."
+              >
+                Coming soon <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
 
         </div>
 
@@ -464,43 +429,32 @@
     </section>
 
 
-    <!-- =========================
-         SKILLS
-    ========================== -->
-
-    <section id="skills" class="section section-alt">
+    <section id="principles" class="section">
 
       <div class="container">
 
-        <p class="eyebrow">
-          SKILLS
-        </p>
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow accent">How I Think</p>
+          <h2>Principles that shape the work.</h2>
+        </div>
 
-        <h2>
-          Tools and areas I work with.
-        </h2>
-
-
-        <div class="skills">
-
-          <span>Frappe Framework</span>
-          <span>ERPNext</span>
-          <span>Python</span>
-          <span>JavaScript</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>MariaDB</span>
-          <span>REST API</span>
-          <span>Git</span>
-          <span>Linux</span>
-          <span>AWS S3</span>
-
-          <span>Product Ownership</span>
-          <span>Business Analysis</span>
-          <span>Workflow Design</span>
-          <span>Requirements</span>
-          <span>System Management</span>
-
+        <div class="principle-grid">
+          <article data-reveal>
+            <h3>Business first.</h3>
+            <p>Technology should solve an operational problem.</p>
+          </article>
+          <article data-reveal>
+            <h3>Build from the workflow.</h3>
+            <p>I start with how the work is actually done.</p>
+          </article>
+          <article data-reveal>
+            <h3>Systems matter.</h3>
+            <p>Good tools need reliable data and permissions behind them.</p>
+          </article>
+          <article data-reveal>
+            <h3>Keep it maintainable.</h3>
+            <p>Simple, clear implementations last longer in production.</p>
+          </article>
         </div>
 
       </div>
@@ -508,87 +462,115 @@
     </section>
 
 
-    <!-- =========================
-         KYANISYS
-    ========================== -->
+    <section id="skills" class="section">
+
+      <div class="container">
+
+        <div class="section-intro" data-reveal>
+          <p class="eyebrow accent">Tools &amp; Technologies</p>
+          <h2>The stack I work with every day.</h2>
+        </div>
+
+        <div class="tools-grid">
+          <div data-path="frappe" data-reveal>
+            <h3>ERP</h3>
+            <ul>
+              <li>Frappe Framework</li>
+              <li>ERPNext</li>
+              <li>Python</li>
+              <li>SQL / MariaDB</li>
+            </ul>
+          </div>
+          <div data-path="web" data-reveal>
+            <h3>Development</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML / CSS</li>
+              <li>REST APIs</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+          <div data-reveal>
+            <h3>Systems</h3>
+            <ul>
+              <li>Linux</li>
+              <li>Huawei OBS</li>
+              <li>Database troubleshooting</li>
+              <li>Production support</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
 
     <section class="section product-section">
 
-      <div class="container product-box">
-
+      <div class="container product-box" data-reveal>
         <div>
-
-          <p class="eyebrow">
-            CURRENT PRODUCT EXPLORATION
-          </p>
-
-          <h2>
-            KyaNiSys
-          </h2>
-
+          <p class="eyebrow">Current product exploration</p>
+          <h2>KyaNiSys</h2>
           <p>
             An independent exploration into building an affordable business system
             for micro and small businesses.
           </p>
-
         </div>
-
-
-        <a class="button secondary" href="#contact">
-          Learn more
-        </a>
-
+        <a class="button light" href="#contact">Learn more</a>
       </div>
 
     </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
+    <section id="about" class="section">
+
+      <div class="container two-column" data-reveal>
+        <div>
+          <p class="eyebrow accent">About</p>
+          <h2>A developer who works from how the business actually runs.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            I have more than 5 years of professional experience in web development,
+            progressing from Web Developer to Mid Web Developer and then Senior Web Developer.
+          </p>
+          <p>
+            My experience also includes a period as a Product Owner, where I worked
+            closely with business requirements, workflows, systems, and operational processes.
+          </p>
+          <p>
+            I enjoy building practical systems that solve real problems and make
+            day-to-day business operations easier to manage.
+          </p>
+          <p>
+            I am looking for opportunities as a Frappe/ERPNext Developer, ERP Developer,
+            Python Developer, Web Developer, or Full-Stack Developer.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
 
     <section id="contact" class="section">
 
-      <div class="container contact">
-
-        <p class="eyebrow">
-          CONTACT
-        </p>
-
-        <h2>
-          Let's connect.
-        </h2>
-
+      <div class="container contact" data-reveal>
+        <p class="eyebrow accent">Contact</p>
+        <h2>Need ERPNext customization or a web application?</h2>
         <p>
           I am open to conversations about Frappe, ERPNext, business systems,
           product work, and selected development opportunities.
         </p>
 
+        <a class="email-link" href="mailto:almariebullo@gmail.com">
+          almariebullo@gmail.com
+        </a>
 
         <div class="contact-links">
-
-          <a href="mailto:almariebullo@gmail.com">
-            almariebullo@gmail.com
-          </a>
-
-          <a
-            href="https://github.com/almariebu"
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/almarie-alim-bullo/"
-            target="_blank"
-            rel="noopener"
-          >
-            LinkedIn
-          </a>
-
+          <a href="https://github.com/almariebu" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/almarie-alim-bullo/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-
       </div>
 
     </section>
@@ -596,24 +578,11 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
   <footer>
-
     <div class="container footer">
-
-      <span>
-        © <span id="year"></span> Almarie Bu
-      </span>
-
-      <span>
-        Senior Web Developer
-      </span>
-
+      <span>© <span id="year"></span> Almarie Bu</span>
+      <span>Web Development · Frappe / ERPNext</span>
     </div>
-
   </footer>
 
 
